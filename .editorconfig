@@ -1,0 +1,171 @@
+﻿root = true
+
+##########  INDENTATION RULES  ##########
+
+    # All file types
+    [*]
+    indent_style = space
+    trim_trailing_whitespace = true
+
+    # XML-based documents
+    [*.{xml,html}]
+    indent_size = 2
+
+    # SandCastle Help File Builder documents (all are XML-based)
+    [*.{tokens,aml,content}]
+    indent_size = 2
+
+    # Other markup languages
+    [*.{yml,yaml,template,json}]
+    indent_size = 2
+
+    # C# code files
+    [*.cs]
+    indent_size = 4
+    
+##########  C# RULES  ##########
+    [*.cs]
+    csharp_style_conditional_delegate_call = true:warning
+    csharp_style_throw_expression = true:warning
+
+    csharp_style_expression_bodied_accessors = true:warning
+    csharp_style_expression_bodied_constructors = true:suggestion
+    csharp_style_expression_bodied_indexers = true:suggestion
+    csharp_style_expression_bodied_methods = true:suggestion
+    csharp_style_expression_bodied_operators = true:suggestion
+    csharp_style_expression_bodied_properties = true:warning
+
+    csharp_style_inlined_variable_declaration = true:warning
+    csharp_style_pattern_matching_over_as_with_null_check = true:warning
+    csharp_style_pattern_matching_over_is_with_cast_check = true:warning
+
+    csharp_style_var_elsewhere = false:warning
+    csharp_style_var_for_built_in_types = false:warning
+    csharp_style_var_when_type_is_apparent = true:suggestion
+
+    csharp_new_line_before_catch = true:warning
+    csharp_new_line_before_else = true:warning
+    csharp_new_line_before_finally = true:warning
+    csharp_new_line_before_members_in_anonymous_types = true:suggestion
+    csharp_new_line_before_members_in_object_initializers = true:suggestion
+    csharp_new_line_before_open_brace = none:warning
+    csharp_new_line_between_query_expression_clauses = true:suggestion
+    
+##########  .NET RULES  ##########
+    [*.{cs,vb}]
+    dotnet_sort_system_directives_first = true:suggestion
+    dotnet_style_coalesce_expression = true:warning
+    dotnet_style_collection_initializer = true:warning
+    dotnet_style_explicit_tuple_names = true:warning
+    dotnet_style_null_propagation = true:warning
+    dotnet_style_object_initializer = true:warning
+
+    dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
+    dotnet_style_predefined_type_for_member_access = true:suggestion
+
+    dotnet_style_qualification_for_event = false:none
+    dotnet_style_qualification_for_field = false:none
+    dotnet_style_qualification_for_method = false:none
+    dotnet_style_qualification_for_property = false:none
+
+    # Naming Rules
+    dotnet_naming_rule.types.symbols = types
+    dotnet_naming_rule.types.style = pascal_case
+    dotnet_naming_rule.types.severity = warning
+
+    dotnet_naming_rule.properties_and_events.symbols = properties_and_events
+    dotnet_naming_rule.properties_and_events.style = pascal_case
+    dotnet_naming_rule.properties_and_events.severity = warning
+
+    dotnet_naming_rule.public_methods.symbols = public_methods
+    dotnet_naming_rule.public_methods.style = pascal_case
+    dotnet_naming_rule.public_methods.severity = warning
+
+    dotnet_naming_rule.hidden_methods.symbols = hidden_methods
+    dotnet_naming_rule.hidden_methods.style = camel_case
+    dotnet_naming_rule.hidden_methods.severity = warning
+
+    dotnet_naming_rule.interfaces.symbols = interfaces
+    dotnet_naming_rule.interfaces.style = interface
+    dotnet_naming_rule.interfaces.severity = warning
+
+    dotnet_naming_rule.private_fields.symbols = private_fields
+    dotnet_naming_rule.private_fields.style = field
+    dotnet_naming_rule.private_fields.severity = warning
+
+    dotnet_naming_rule.protected_fields.symbols = protected_fields
+    dotnet_naming_rule.protected_fields.style = camel_case
+    dotnet_naming_rule.protected_fields.severity = warning
+
+    dotnet_naming_rule.static_fields.symbols = static_fields
+    dotnet_naming_rule.static_fields.style = static_field
+    dotnet_naming_rule.static_fields.severity = warning
+
+    dotnet_naming_rule.parameters.symbols = parameters
+    dotnet_naming_rule.parameters.style = camel_case
+    dotnet_naming_rule.parameters.severity = warning
+
+    dotnet_naming_rule.public_async.symbols = public_async
+    dotnet_naming_rule.public_async.style = async_pascal
+    dotnet_naming_rule.public_async.severity = warning
+
+    dotnet_naming_rule.hidden_async.symbols = hidden_async
+    dotnet_naming_rule.hidden_async.style = async_camel
+    dotnet_naming_rule.hidden_async.severity = warning
+
+    # Naming Symbols
+    dotnet_naming_symbols.types.applicable_kinds = class, struct, enum, event, delegate
+    dotnet_naming_symbols.types.applicable_accessibilities = *
+
+    dotnet_naming_symbols.properties_and_events.applicable_kinds = property, event
+    dotnet_naming_symbols.properties_and_events.applicable_accessibilities = *
+
+    dotnet_naming_symbols.public_methods.applicable_kinds = method
+    dotnet_naming_symbols.public_methods.applicable_accessibilities = public, internal
+
+    dotnet_naming_symbols.hidden_methods.applicable_kinds = method
+    dotnet_naming_symbols.hidden_methods.applicable_accessibilities = private, protected, protected_internal
+
+    dotnet_naming_symbols.interfaces.applicable_kinds = interface
+    dotnet_naming_symbols.interfaces.applicable_accessibilities = *
+
+    dotnet_naming_symbols.private_fields.applicable_kinds = field
+    dotnet_naming_symbols.private_fields.applicable_accessibilities = private
+
+    dotnet_naming_symbols.protected_fields.applicable_kinds = field
+    dotnet_naming_symbols.protected_fields.applicable_accessibilities = protected, protected_internal
+
+    dotnet_naming_symbols.static_fields.applicable_kinds = field
+    dotnet_naming_symbols.static_fields.applicable_accessibilities = private, protected, protected_internal
+    dotnet_naming_symbols.static_fields.required_modifiers = static
+
+    dotnet_naming_symbols.parameters.applicable_kinds = parameter
+    dotnet_naming_symbols.parameters.applicable_accessibilities = *
+
+    dotnet_naming_symbols.public_async.applicable_kinds = method
+    dotnet_naming_symbols.public_async.applicable_accessibilities = public, internal
+    dotnet_naming_symbols.public_async.required_modifiers = async
+
+    dotnet_naming_symbols.hidden_async.applicable_kinds = method
+    dotnet_naming_symbols.hidden_async.applicable_accessibilities = private, protected, protected_internal
+    dotnet_naming_symbols.hidden_async.required_modifiers = async
+
+    # Naming Styles
+    dotnet_naming_style.pascal_case.capitalization = pascal_case
+
+    dotnet_naming_style.camel_case.capitalization = camel_case
+
+    dotnet_naming_style.interface.required_prefix = I
+    dotnet_naming_style.interface.capitalization = pascal_case
+
+    dotnet_naming_style.field.required_prefix = _
+    dotnet_naming_style.field.capitalization = camel_case
+
+    dotnet_naming_style.static_field.required_prefix = s_
+    dotnet_naming_style.static_field.capitalization = camel_case
+
+    dotnet_naming_style.async_pascal.required_suffix = Async
+    dotnet_naming_style.async_pascal.capitalization = pascal_case
+
+    dotnet_naming_style.async_camel.required_suffix = Async
+    dotnet_naming_style.async_camel.capitalization = camel_case
