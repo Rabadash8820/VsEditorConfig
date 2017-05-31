@@ -11,17 +11,17 @@ This repository contains such an .editorconfig.  It was developed for Danware's 
 Suppose you have the following directory structure:
 ```
 C:\
-    \git
-        \VisualStudioEditorConfig
+    git\
+        VisualStudioEditorConfig\
             .editorconfig
-        \Repo1
-        \Repo2
-        \RepoGroup
-            \Repo3
-            \Repo4
+        Repo1\
+        Repo2\
+        RepoGroup\
+            Repo3\
+            Repo4\
         ...
 ```
-If you want to use the same style preferences in all of your repos (Repo1, Repo2, Repo3, Repo4, etc.), then you should put the .editorconfig file in the root "C:\git" folder.  Unfortunately, the .editorconfig file was cloned into the subfolder "\VisualStudioEditorConfig".  You could copy the file to C:\git, but you would have to re-copy it anytime your style preferences change.  The solution is to create a symbolic link in the root folder to the versioned .editorconfig.
+If you want to use the same style preferences in all of your repos (Repo1, Repo2, Repo3, Repo4, etc.), then you should put the .editorconfig file in the root "C:\git" folder.  Unfortunately, the .editorconfig file was cloned into the subfolder "VisualStudioEditorConfig\".  You could copy the file to C:\git, but you would have to re-copy it anytime your style preferences change.  The solution is to create a symbolic link in the root folder to the versioned .editorconfig.
 
 At an elevated command prompt, run the following command:
 ```
