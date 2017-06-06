@@ -1,4 +1,4 @@
-# VisualStudioEditorConfig
+# Visual Studio EditorConfig
 
 ## About
 
@@ -10,21 +10,20 @@ This repository contains such an .editorconfig.  It was developed for Danware's 
 
 Suppose you have the following directory structure:
 ```
-C:\
-    git\
-        VisualStudioEditorConfig\
-            .editorconfig
-        Repo1\
-        Repo2\
-        RepoGroup\
-            Repo3\
-            Repo4\
-        ...
+root-directory\
+    VisualStudioEditorConfig\
+        .editorconfig
+    Repo1\
+    Repo2\
+    RepoGroup\
+        Repo3\
+        Repo4\
+    ...
 ```
-If you want to use the same style preferences in all of your repos (Repo1, Repo2, Repo3, Repo4, etc.), then you should put the .editorconfig file in the root "C:\git" folder.  Unfortunately, the .editorconfig file was cloned into the subfolder "VisualStudioEditorConfig\".  You could copy the file to C:\git, but you would have to re-copy it anytime your style preferences change.  The solution is to create a symbolic link in the root folder to the versioned .editorconfig.
+If you want to use the same style preferences in all of your repos (Repo1, Repo2, Repo3, Repo4, etc.), then you should put the .editorconfig file in the "root-directory\" folder.  Unfortunately, the .editorconfig file was cloned into the subfolder "VsEditorConfig\".  You could copy the file to root-directory, but you would have to re-copy it anytime your style preferences change.  The solution is to create a symbolic link in root-directory to the versioned .editorconfig.
 
 At an elevated command prompt, run the following command:
 ```
-MKLINK C:\git\.editorconfig "C:\git\VisualStudioEditorConfig\.editorconfig"
+MKLINK "root-directory\.editorconfig" "root-directory\VsEditorConfig\.editorconfig"
 ```
 subsituting the paths with those needed for your machine.  If you do not use an elevated command prompt (i.e., a command prompt opened with "Run as Administrator"), then you will get the error: `You do not have sufficient privilege to perform this operation.`  Once the link is created, you will be able to update the .editorconfig with `git pull` as normal, and the latest style preferences will then be available to all of your repositories.  Of course, if you don't like one of Danware's preferences, then you can place a second .editorconfig in the root directory with your overrides, or put one in an individual repo that needs to have special style preferences.
