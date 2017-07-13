@@ -68,95 +68,84 @@
     dotnet_style_qualification_for_method = false:none
     dotnet_style_qualification_for_property = false:none
 
-    # Naming Rules
+    # Type naming rules
+    dotnet_naming_symbols.types.applicable_kinds = class, struct, enum, event, delegate
+    dotnet_naming_symbols.types.applicable_accessibilities = *
     dotnet_naming_rule.types.symbols = types
     dotnet_naming_rule.types.style = pascal_case
     dotnet_naming_rule.types.severity = warning
 
+    # Property/event naming rules
+    dotnet_naming_symbols.properties_and_events.applicable_kinds = property, event
+    dotnet_naming_symbols.properties_and_events.applicable_accessibilities = *
     dotnet_naming_rule.properties_and_events.symbols = properties_and_events
     dotnet_naming_rule.properties_and_events.style = pascal_case
     dotnet_naming_rule.properties_and_events.severity = warning
 
-    dotnet_naming_rule.public_methods.symbols = public_methods
-    dotnet_naming_rule.public_methods.style = pascal_case
-    dotnet_naming_rule.public_methods.severity = warning
-
-    dotnet_naming_rule.hidden_methods.symbols = hidden_methods
-    dotnet_naming_rule.hidden_methods.style = camel_case
-    dotnet_naming_rule.hidden_methods.severity = warning
-
-    dotnet_naming_rule.interfaces.symbols = interfaces
-    dotnet_naming_rule.interfaces.style = interface
-    dotnet_naming_rule.interfaces.severity = warning
-
-    dotnet_naming_rule.const_fields.symbols = const_fields
-    dotnet_naming_rule.const_fields.style = const_field
-    dotnet_naming_rule.const_fields.severity = warning
-
-    dotnet_naming_rule.static_fields.symbols = static_fields
-    dotnet_naming_rule.static_fields.style = static_field
-    dotnet_naming_rule.static_fields.severity = warning
-
-    dotnet_naming_rule.private_fields.symbols = private_fields
-    dotnet_naming_rule.private_fields.style = field
-    dotnet_naming_rule.private_fields.severity = warning
-
-    dotnet_naming_rule.protected_fields.symbols = protected_fields
-    dotnet_naming_rule.protected_fields.style = camel_case
-    dotnet_naming_rule.protected_fields.severity = warning
-
+    # Parameter naming rules
+    dotnet_naming_symbols.parameters.applicable_kinds = parameter
     dotnet_naming_rule.parameters.symbols = parameters
     dotnet_naming_rule.parameters.style = camel_case
     dotnet_naming_rule.parameters.severity = warning
 
+    # Public method naming rules
+    dotnet_naming_symbols.public_methods.applicable_kinds = method
+    dotnet_naming_symbols.public_methods.applicable_accessibilities = public, internal
+    dotnet_naming_rule.public_methods.symbols = public_methods
+    dotnet_naming_rule.public_methods.style = pascal_case
+    dotnet_naming_rule.public_methods.severity = warning
+
+    # Hidden method naming rules
+    dotnet_naming_symbols.hidden_methods.applicable_kinds = method
+    dotnet_naming_symbols.hidden_methods.applicable_accessibilities = private, protected, protected_internal
+    dotnet_naming_rule.hidden_methods.symbols = hidden_methods
+    dotnet_naming_rule.hidden_methods.style = camel_case
+    dotnet_naming_rule.hidden_methods.severity = warning
+
+    # Interface naming rules
+    dotnet_naming_symbols.interfaces.applicable_kinds = interface
+    dotnet_naming_symbols.interfaces.applicable_accessibilities = *
+    dotnet_naming_rule.interfaces.symbols = interfaces
+    dotnet_naming_rule.interfaces.style = interface
+    dotnet_naming_rule.interfaces.severity = warning
+
+    # Const field naming rules
+    dotnet_naming_symbols.const_fields.applicable_accessibilities = *
+    dotnet_naming_symbols.const_fields.required_modifiers = const
+    dotnet_naming_rule.const_fields.symbols = const_fields
+    dotnet_naming_rule.const_fields.style = const_field
+    dotnet_naming_rule.const_fields.severity = warning
+
+    # Static field naming rules
+    dotnet_naming_symbols.static_fields.applicable_kinds = field
+    dotnet_naming_symbols.static_fields.applicable_accessibilities = private, protected, protected_internal
+    dotnet_naming_symbols.static_fields.required_modifiers = static
+    dotnet_naming_rule.static_fields.symbols = static_fields
+    dotnet_naming_rule.static_fields.style = static_field
+    dotnet_naming_rule.static_fields.severity = warning
+
+    # Hidden field naming rules
+    dotnet_naming_symbols.hidden_fields.applicable_kinds = field
+    dotnet_naming_symbols.hidden_fields.applicable_accessibilities = private, protected, protected_internal
+    dotnet_naming_rule.hidden_fields.symbols = hidden_fields
+    dotnet_naming_rule.hidden_fields.style = field
+    dotnet_naming_rule.hidden_fields.severity = warning
+
+    # Public async method naming rules
+    dotnet_naming_symbols.public_async.applicable_kinds = method
+    dotnet_naming_symbols.public_async.applicable_accessibilities = public, internal
+    dotnet_naming_symbols.public_async.required_modifiers = async
     dotnet_naming_rule.public_async.symbols = public_async
     dotnet_naming_rule.public_async.style = async_pascal
     dotnet_naming_rule.public_async.severity = warning
 
-    dotnet_naming_rule.hidden_async.symbols = hidden_async
-    dotnet_naming_rule.hidden_async.style = async_camel
-    dotnet_naming_rule.hidden_async.severity = warning
-
-    # Naming Symbols
-    dotnet_naming_symbols.types.applicable_kinds = class, struct, enum, event, delegate
-    dotnet_naming_symbols.types.applicable_accessibilities = *
-
-    dotnet_naming_symbols.properties_and_events.applicable_kinds = property, event
-    dotnet_naming_symbols.properties_and_events.applicable_accessibilities = *
-
-    dotnet_naming_symbols.public_methods.applicable_kinds = method
-    dotnet_naming_symbols.public_methods.applicable_accessibilities = public, internal
-
-    dotnet_naming_symbols.hidden_methods.applicable_kinds = method
-    dotnet_naming_symbols.hidden_methods.applicable_accessibilities = private, protected, protected_internal
-
-    dotnet_naming_symbols.interfaces.applicable_kinds = interface
-    dotnet_naming_symbols.interfaces.applicable_accessibilities = *
-
-    dotnet_naming_symbols.private_fields.applicable_kinds = field
-    dotnet_naming_symbols.private_fields.applicable_accessibilities = private
-
-    dotnet_naming_symbols.protected_fields.applicable_kinds = field
-    dotnet_naming_symbols.protected_fields.applicable_accessibilities = protected, protected_internal
-
-    dotnet_naming_symbols.const_fields.applicable_kinds = *
-    dotnet_naming_symbols.const_fields.applicable_accessibilities = *
-    dotnet_naming_symbols.const_fields.required_modifiers = const
-
-    dotnet_naming_symbols.static_fields.applicable_kinds = field
-    dotnet_naming_symbols.static_fields.applicable_accessibilities = private, protected, protected_internal
-    dotnet_naming_symbols.static_fields.required_modifiers = static
-
-    dotnet_naming_symbols.parameters.applicable_kinds = parameter
-    dotnet_naming_symbols.parameters.applicable_accessibilities = *
-
-    dotnet_naming_symbols.public_async.applicable_kinds = method
-    dotnet_naming_symbols.public_async.applicable_accessibilities = public, internal
-    dotnet_naming_symbols.public_async.required_modifiers = async
-
+    # Hidden async method naming rules
     dotnet_naming_symbols.hidden_async.applicable_kinds = method
     dotnet_naming_symbols.hidden_async.applicable_accessibilities = private, protected, protected_internal
     dotnet_naming_symbols.hidden_async.required_modifiers = async
+    dotnet_naming_rule.hidden_async.symbols = hidden_async
+    dotnet_naming_rule.hidden_async.style = async_camel
+    dotnet_naming_rule.hidden_async.severity = warning
 
     # Naming Styles
     dotnet_naming_style.pascal_case.capitalization = pascal_case
