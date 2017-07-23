@@ -24,6 +24,7 @@
     indent_size = 4
     
 ##########  C# RULES  ##########
+
     [*.cs]
     csharp_style_conditional_delegate_call = true:warning
     csharp_style_throw_expression = true:warning
@@ -52,6 +53,7 @@
     csharp_new_line_between_query_expression_clauses = true:suggestion
     
 ##########  .NET RULES  ##########
+
     [*.{cs,vb}]
     dotnet_sort_system_directives_first = true:suggestion
     dotnet_style_coalesce_expression = true:warning
@@ -67,6 +69,8 @@
     dotnet_style_qualification_for_field = false:none
     dotnet_style_qualification_for_method = false:none
     dotnet_style_qualification_for_property = false:none
+    
+##########  .NET NAMING RULES  ##########
 
     # Type naming rules
     dotnet_naming_symbols.types.applicable_kinds = class, struct, enum, event, delegate
@@ -113,8 +117,14 @@
     dotnet_naming_symbols.const_fields.applicable_accessibilities = *
     dotnet_naming_symbols.const_fields.required_modifiers = const
     dotnet_naming_rule.const_fields.symbols = const_fields
-    dotnet_naming_rule.const_fields.style = const_field
+    dotnet_naming_rule.const_fields.style = all_upper
     dotnet_naming_rule.const_fields.severity = warning
+
+    # Enum naming rules
+    dotnet_naming_symbols.enums.applicable_kinds = enum
+    dotnet_naming_rule.enums.symbols = enums
+    dotnet_naming_rule.enums.style = pascal_case
+    dotnet_naming_rule.enums.severity = warning
 
     # Static field naming rules
     dotnet_naming_symbols.static_fields.applicable_kinds = field
@@ -146,8 +156,9 @@
     dotnet_naming_rule.hidden_async.symbols = hidden_async
     dotnet_naming_rule.hidden_async.style = async_camel
     dotnet_naming_rule.hidden_async.severity = warning
+    
+##########  NAMING STYLES  ##########
 
-    # Naming Styles
     dotnet_naming_style.pascal_case.capitalization = pascal_case
 
     dotnet_naming_style.camel_case.capitalization = camel_case
@@ -158,7 +169,7 @@
     dotnet_naming_style.field.required_prefix = _
     dotnet_naming_style.field.capitalization = camel_case
 
-    dotnet_naming_style.const_field.capitalization = all_upper
+    dotnet_naming_style.all_upper.capitalization = all_upper
 
     dotnet_naming_style.static_field.required_prefix = s_
     dotnet_naming_style.static_field.capitalization = camel_case
