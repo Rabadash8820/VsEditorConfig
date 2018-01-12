@@ -6,26 +6,35 @@
     [*]
     indent_style = space
     trim_trailing_whitespace = true
+    # Don't specify an indent_size here; that has too many unintended consequences.
 
-    # XML-based documents
-    [*.{xml,html}]
+    # Markup documents
+    [*.{xml,yml,yaml,template,json}]
+    indent_size = 2
+
+    # Xml-based config files
+    [*.{props,targets,ruleset,config,nuspec,resx,vsixmanifest,vsct}]
+    indent_size = 2
+
+    # Web documents
+    [*.{html}]
+    indent_size = 4
+
+    # MSBuild project files
+    [*.{csproj,vbproj,vcxproj,vcxproj.filters}]
     indent_size = 2
 
     # SandCastle Help File Builder documents (all are XML-based)
-    [*.{tokens,aml,content}]
+    [*.{tokens,aml,content,shfbproj}]
     indent_size = 2
 
-    # Other markup languages
-    [*.{yml,yaml,template,json}]
-    indent_size = 2
-
-    # C# code files
-    [*.cs]
+    # .NET code files
+    [*.{cs,csx,vb,vbx}]
     indent_size = 4
-    
 ##########  C# RULES  ##########
 
     [*.cs]
+
     csharp_style_conditional_delegate_call = true:warning
     csharp_style_throw_expression = true:warning
 
@@ -51,10 +60,11 @@
     csharp_new_line_before_members_in_object_initializers = true:suggestion
     csharp_new_line_before_open_brace = none:suggestion
     csharp_new_line_between_query_expression_clauses = true:suggestion
-    
+
 ##########  .NET RULES  ##########
 
     [*.{cs,vb}]
+
     dotnet_sort_system_directives_first = true:suggestion
     dotnet_style_coalesce_expression = true:warning
     dotnet_style_collection_initializer = true:warning
@@ -69,8 +79,10 @@
     dotnet_style_qualification_for_field = false:none
     dotnet_style_qualification_for_method = false:none
     dotnet_style_qualification_for_property = false:none
-    
+
 ##########  .NET NAMING RULES  ##########
+
+    [*.{cs,vb}]
 
     # Type naming rules
     dotnet_naming_symbols.types.applicable_kinds = class, struct, enum, event, delegate
@@ -156,7 +168,7 @@
     dotnet_naming_rule.hidden_async.symbols = hidden_async
     dotnet_naming_rule.hidden_async.style = async_camel
     dotnet_naming_rule.hidden_async.severity = warning
-    
+
 ##########  NAMING STYLES  ##########
 
     dotnet_naming_style.pascal_case.capitalization = pascal_case
