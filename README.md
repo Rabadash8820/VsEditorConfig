@@ -22,8 +22,16 @@ root-directory\
 ```
 If you want to use the same style preferences in all of your repos (Repo1, Repo2, Repo3, Repo4, etc.), then you should put the .editorconfig file in the "root-directory\" folder.  Unfortunately, the .editorconfig file was cloned into the subfolder "VsEditorConfig\".  You could copy the file to root-directory, but you would have to re-copy it anytime your style preferences change.  The solution is to create a symbolic link in root-directory to the versioned .editorconfig.
 
-At an elevated command prompt, run the following command:
+On Windows, run the following command at an elevated command prompt:
 ```
 MKLINK "root-directory\.editorconfig" "root-directory\VsEditorConfig\.editorconfig"
 ```
-subsituting the paths with those needed for your machine.  If you do not use an elevated command prompt (i.e., a command prompt opened with "Run as Administrator"), then you will get the error: `You do not have sufficient privilege to perform this operation.`  Once the link is created, you will be able to update the .editorconfig with `git pull` as normal, and the latest style preferences will then be available to all of your repositories.  Of course, if you don't like one of Danware's preferences, then you can place a second .editorconfig in the root directory with your overrides, or put one in an individual repo that needs to have special style preferences.
+
+On MacOS/Linux, run the following command:
+```
+ln -s "root-directory/VsEditorConfig/.editorconfig" "root-directory/.editorconfig"
+```
+
+Subsitute the above paths with those needed for your particular directory structure (absolute paths work best).  If you do not use an elevated command prompt (i.e., a command prompt opened with "Run as Administrator"), then you will get the error: `You do not have sufficient privilege to perform this operation.`  Once the link is created, you will be able to update the `.editorconfig` with `git pull` as normal, and the latest style preferences will then be available to all of your repositories (after restarting Visual Studio).
+
+If you don't like any of our style/formatting preferences, then you can either use our `.editorconfig` as a starting point and modify it to fit your particular conventions, or add a separate `.editorconfig` with your overrides to the individual repos that need those overrides.
