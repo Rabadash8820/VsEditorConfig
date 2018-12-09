@@ -1,4 +1,4 @@
-﻿root = true
+root = true
 
 ##########  INDENTATION RULES  ##########
 
@@ -167,6 +167,12 @@
     dotnet_naming_rule.non_private_methods.style = pascal_case
     dotnet_naming_rule.non_private_methods.severity = warning
 
+    # Local function naming rules
+    dotnet_naming_symbols.local_functions.applicable_kinds = local_function
+    dotnet_naming_rule.local_functions.symbols = local_functions
+    dotnet_naming_rule.local_functions.style = camel_case
+    dotnet_naming_rule.local_functions.severity = warning
+
     # Private async methods
     dotnet_naming_symbols.private_async.applicable_kinds = method
     dotnet_naming_symbols.private_async.applicable_accessibilities = private
@@ -182,6 +188,13 @@
     dotnet_naming_rule.non_private_async.symbols = non_private_async
     dotnet_naming_rule.non_private_async.style = async_pascal
     dotnet_naming_rule.non_private_async.severity = warning
+
+    # Local function naming rules
+    dotnet_naming_symbols.local_async.applicable_kinds = local_function
+    dotnet_naming_symbols.local_async.required_modifiers = async
+    dotnet_naming_rule.local_async.symbols = local_functions
+    dotnet_naming_rule.local_async.style = async_camel
+    dotnet_naming_rule.local_async.severity = warning
 
 ##########  NAMING STYLES  ##########
 
