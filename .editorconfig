@@ -1,4 +1,4 @@
-﻿root = true
+root = true
 
 ##########  INDENTATION RULES  ##########
 
@@ -144,19 +144,12 @@
     dotnet_naming_rule.private_fields.style = dash_camel
     dotnet_naming_rule.private_fields.severity = warning
 
-    # Protected fields
-    dotnet_naming_symbols.protected_fields.applicable_kinds = field
-    dotnet_naming_symbols.protected_fields.applicable_accessibilities = protected, protected_internal
-    dotnet_naming_rule.protected_fields.symbols = protected_fields
-    dotnet_naming_rule.protected_fields.style = pascal_case
-    dotnet_naming_rule.protected_fields.severity = warning
-
-    # Public fields
-    dotnet_naming_symbols.public_fields.applicable_kinds = field
-    dotnet_naming_symbols.public_fields.applicable_accessibilities = public, public_internal
-    dotnet_naming_rule.public_fields.symbols = public_fields
-    dotnet_naming_rule.public_fields.style = pascal_case
-    dotnet_naming_rule.public_fields.severity = warning
+    # Non-private fields
+    dotnet_naming_symbols.non_private_fields.applicable_kinds = field
+    dotnet_naming_symbols.non_private_fields.applicable_accessibilities = protected, protected_internal, public, internal
+    dotnet_naming_rule.non_private_fields.symbols = non_private_fields
+    dotnet_naming_rule.non_private_fields.style = pascal_case
+    dotnet_naming_rule.non_private_fields.severity = warning
 
     # Method naming rules
 
@@ -167,21 +160,12 @@
     dotnet_naming_rule.private_methods.style = camel_case
     dotnet_naming_rule.private_methods.severity = warning
 
-    # Protected method naming rules
-    dotnet_naming_symbols.protected_methods.applicable_kinds = method
-    dotnet_naming_symbols.protected_methods.applicable_accessibilities = protected, protected_internal
-    dotnet_naming_rule.protected_methods.symbols = protected_methods
-    dotnet_naming_rule.protected_methods.style = pascal_case
-    dotnet_naming_rule.protected_methods.severity = warning
-
-    # Public method naming rules
-    dotnet_naming_symbols.public_methods.applicable_kinds = method
-    dotnet_naming_symbols.public_methods.applicable_accessibilities = public, internal
-    dotnet_naming_rule.public_methods.symbols = public_methods
-    dotnet_naming_rule.public_methods.style = pascal_case
-    dotnet_naming_rule.public_methods.severity = warning
-
-    # Async method naming rules
+    # Non-private method naming rules
+    dotnet_naming_symbols.non_private_methods.applicable_kinds = method
+    dotnet_naming_symbols.non_private_methods.applicable_accessibilities = protected, protected_internal, public, internal
+    dotnet_naming_rule.non_private_methods.symbols = non_private_methods
+    dotnet_naming_rule.non_private_methods.style = pascal_case
+    dotnet_naming_rule.non_private_methods.severity = warning
 
     # Private async methods
     dotnet_naming_symbols.private_async.applicable_kinds = method
@@ -191,21 +175,14 @@
     dotnet_naming_rule.private_async.style = async_camel
     dotnet_naming_rule.private_async.severity = warning
 
-    # Protected async methods
-    dotnet_naming_symbols.protected_async.applicable_kinds = method
-    dotnet_naming_symbols.protected_async.applicable_accessibilities = protected, protected_internal
-    dotnet_naming_symbols.protected_async.required_modifiers = async
-    dotnet_naming_rule.protected_async.symbols = protected_async
-    dotnet_naming_rule.protected_async.style = async_pascal
-    dotnet_naming_rule.protected_async.severity = warning
+    # Non-private async methods
+    dotnet_naming_symbols.non_private_async.applicable_kinds = method
+    dotnet_naming_symbols.non_private_async.applicable_accessibilities = protected, protected_internal, public, internal
+    dotnet_naming_symbols.non_private_async.required_modifiers = async
+    dotnet_naming_rule.non_private_async.symbols = non_private_async
+    dotnet_naming_rule.non_private_async.style = async_pascal
+    dotnet_naming_rule.non_private_async.severity = warning
 
-    # Public async methods
-    dotnet_naming_symbols.public_async.applicable_kinds = method
-    dotnet_naming_symbols.public_async.applicable_accessibilities = public, internal
-    dotnet_naming_symbols.public_async.required_modifiers = async
-    dotnet_naming_rule.public_async.symbols = public_async
-    dotnet_naming_rule.public_async.style = async_pascal
-    dotnet_naming_rule.public_async.severity = warning
 ##########  NAMING STYLES  ##########
 
     dotnet_naming_style.pascal_case.capitalization = pascal_case
