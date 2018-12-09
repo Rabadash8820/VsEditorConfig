@@ -1,4 +1,4 @@
-root = true
+﻿root = true
 
 ##########  INDENTATION RULES  ##########
 
@@ -122,12 +122,12 @@ root = true
 
     # Field naming rules
 
-    # Const fields
-    dotnet_naming_symbols.const_fields.applicable_accessibilities = *
-    dotnet_naming_symbols.const_fields.required_modifiers = const
-    dotnet_naming_rule.const_fields.symbols = const_fields
-    dotnet_naming_rule.const_fields.style = all_upper
-    dotnet_naming_rule.const_fields.severity = warning
+    # Private consts
+    dotnet_naming_symbols.private_consts.applicable_accessibilities = private
+    dotnet_naming_symbols.private_consts.required_modifiers = const
+    dotnet_naming_rule.private_consts.symbols = private_consts
+    dotnet_naming_rule.private_consts.style = all_upper
+    dotnet_naming_rule.private_consts.severity = warning
 
     # Private static fields
     dotnet_naming_symbols.private_static_fields.applicable_kinds = field
