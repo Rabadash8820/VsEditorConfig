@@ -1,4 +1,4 @@
-root = true
+﻿root = true
 
 ##########  INDENTATION RULES  ##########
 
@@ -141,14 +141,14 @@ root = true
     dotnet_naming_symbols.private_static_fields.applicable_accessibilities = private
     dotnet_naming_symbols.private_static_fields.required_modifiers = static
     dotnet_naming_rule.private_static_fields.symbols = private_static_fields
-    dotnet_naming_rule.private_static_fields.style = s_dash_camel
+    dotnet_naming_rule.private_static_fields.style = s_underscore_camel
     dotnet_naming_rule.private_static_fields.severity = warning
 
     # Private fields
     dotnet_naming_symbols.private_fields.applicable_kinds = field
     dotnet_naming_symbols.private_fields.applicable_accessibilities = private
     dotnet_naming_rule.private_fields.symbols = private_fields
-    dotnet_naming_rule.private_fields.style = dash_camel
+    dotnet_naming_rule.private_fields.style = underscore_camel
     dotnet_naming_rule.private_fields.severity = warning
 
     # Non-private fields
@@ -212,13 +212,13 @@ root = true
     dotnet_naming_style.interface.required_prefix = I
     dotnet_naming_style.interface.capitalization = pascal_case
 
-    dotnet_naming_style.dash_camel.required_prefix = _
-    dotnet_naming_style.dash_camel.capitalization = camel_case
+    dotnet_naming_style.underscore_camel.required_prefix = _
+    dotnet_naming_style.underscore_camel.capitalization = camel_case
 
     dotnet_naming_style.all_upper.capitalization = all_upper
 
-    dotnet_naming_style.s_dash_camel.required_prefix = s_
-    dotnet_naming_style.s_dash_camel.capitalization = camel_case
+    dotnet_naming_style.s_underscore_camel.required_prefix = s_
+    dotnet_naming_style.s_underscore_camel.capitalization = camel_case
 
     dotnet_naming_style.async_pascal.required_suffix = Async
     dotnet_naming_style.async_pascal.capitalization = pascal_case
