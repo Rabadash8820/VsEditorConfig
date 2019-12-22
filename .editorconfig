@@ -1,4 +1,4 @@
-﻿root = true
+root = true
 
 ##########  INDENTATION RULES  ##########
 
@@ -128,6 +128,13 @@
     dotnet_naming_rule.private_consts.symbols = private_consts
     dotnet_naming_rule.private_consts.style = all_upper
     dotnet_naming_rule.private_consts.severity = warning
+
+    # Non-private consts
+    dotnet_naming_symbols.non_private_consts.applicable_accessibilities = private_protected, protected, protected_internal, internal, public
+    dotnet_naming_symbols.non_private_consts.required_modifiers = const
+    dotnet_naming_rule.non_private_consts.symbols = const_fields
+    dotnet_naming_rule.non_private_consts.style = pascal_case
+    dotnet_naming_rule.non_private_consts.severity = warning
 
     # Private static fields
     dotnet_naming_symbols.private_static_fields.applicable_kinds = field
