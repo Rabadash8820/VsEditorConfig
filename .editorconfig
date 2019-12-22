@@ -153,7 +153,7 @@ root = true
 
     # Non-private fields
     dotnet_naming_symbols.non_private_fields.applicable_kinds = field
-    dotnet_naming_symbols.non_private_fields.applicable_accessibilities = protected, protected_internal, public, internal
+    dotnet_naming_symbols.non_private_fields.applicable_accessibilities = private_protected, protected, protected_internal, internal, public
     dotnet_naming_rule.non_private_fields.symbols = non_private_fields
     dotnet_naming_rule.non_private_fields.style = pascal_case
     dotnet_naming_rule.non_private_fields.severity = warning
@@ -169,7 +169,7 @@ root = true
 
     # Non-private method naming rules
     dotnet_naming_symbols.non_private_methods.applicable_kinds = method
-    dotnet_naming_symbols.non_private_methods.applicable_accessibilities = protected, protected_internal, public, internal
+    dotnet_naming_symbols.non_private_methods.applicable_accessibilities = private_protected, protected, protected_internal, internal, public
     dotnet_naming_rule.non_private_methods.symbols = non_private_methods
     dotnet_naming_rule.non_private_methods.style = pascal_case
     dotnet_naming_rule.non_private_methods.severity = warning
@@ -190,7 +190,7 @@ root = true
 
     # Non-private async methods
     dotnet_naming_symbols.non_private_async.applicable_kinds = method
-    dotnet_naming_symbols.non_private_async.applicable_accessibilities = protected, protected_internal, public, internal
+    dotnet_naming_symbols.non_private_async.applicable_accessibilities = private_protected, protected, protected_internal, internal, public
     dotnet_naming_symbols.non_private_async.required_modifiers = async
     dotnet_naming_rule.non_private_async.symbols = non_private_async
     dotnet_naming_rule.non_private_async.style = async_pascal
