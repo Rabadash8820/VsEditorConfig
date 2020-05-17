@@ -4,7 +4,7 @@
 
 Most sources on the internet recommend checking an `.editorconfig` file into every repository, much like a `package.json` or `Nuget.config` file.  However, you will likely be using the same coding style preferences in most of the projects that you develop with Visual Studio (C# projects in particular).  Therefore, to avoid duplicating these preferences into every new repository (a nightmare to update if your style preferences ever change), it is much simpler to have a single `.editorconfig` file in its own repository, and then your other repos utilize that one.
 
-This repository contains such an `.editorconfig`.  It was developed for Danware's projects, but we hope that our style preferences are general enough, to be of use to any Visual Studio project, in any repository.
+This repository contains such an `.editorconfig`.  I developed it for my own projects, but I hope that my style preferences are general enough, to be of use to any Visual Studio project, in any repository.
 
 ## Usage
 
