@@ -241,7 +241,7 @@
     # Non-private consts
     dotnet_naming_symbols.non_private_consts.applicable_accessibilities = private_protected, protected, protected_internal, internal, public
     dotnet_naming_symbols.non_private_consts.required_modifiers = const
-    dotnet_naming_rule.non_private_consts.symbols = const_fields
+    dotnet_naming_rule.non_private_consts.symbols = non_private_consts
     dotnet_naming_rule.non_private_consts.style = pascal_case
     dotnet_naming_rule.non_private_consts.severity = warning
 
@@ -308,7 +308,7 @@
     # Local function naming rules
     dotnet_naming_symbols.local_async.applicable_kinds = local_function
     dotnet_naming_symbols.local_async.required_modifiers = async
-    dotnet_naming_rule.local_async.symbols = local_functions
+    dotnet_naming_rule.local_async.symbols = local_async
     dotnet_naming_rule.local_async.style = async_camel
     dotnet_naming_rule.local_async.severity = warning
 
