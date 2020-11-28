@@ -231,8 +231,8 @@
 
     # Field naming rules
 
-    # Private consts
-    dotnet_naming_symbols.private_consts.applicable_accessibilities = private
+    # Private/local consts
+    dotnet_naming_symbols.private_consts.applicable_accessibilities = private, local
     dotnet_naming_symbols.private_consts.required_modifiers = const
     dotnet_naming_rule.private_consts.symbols = private_consts
     dotnet_naming_rule.private_consts.style = all_upper
