@@ -263,10 +263,18 @@ root = true
     # Private static fields
     dotnet_naming_symbols.private_static_fields.applicable_kinds = field
     dotnet_naming_symbols.private_static_fields.applicable_accessibilities = private
-    dotnet_naming_symbols.private_static_fields.required_modifiers = static
+    dotnet_naming_symbols.private_static_fields.required_modifiers = static, readonly
     dotnet_naming_rule.private_static_fields.symbols = private_static_fields
-    dotnet_naming_rule.private_static_fields.style = s_underscore_camel
+    dotnet_naming_rule.private_static_fields.style = all_upper
     dotnet_naming_rule.private_static_fields.severity = warning
+
+    # Non-private static fields
+    dotnet_naming_symbols.non_private_static_fields.applicable_kinds = field
+    dotnet_naming_symbols.non_private_static_fields.applicable_accessibilities = private_protected, protected, protected_internal, internal, public
+    dotnet_naming_symbols.non_private_static_fields.required_modifiers = static
+    dotnet_naming_rule.non_private_static_fields.symbols = non_private_static_fields
+    dotnet_naming_rule.non_private_static_fields.style = pascal_case
+    dotnet_naming_rule.non_private_static_fields.severity = warning
 
     # Private fields
     dotnet_naming_symbols.private_fields.applicable_kinds = field
