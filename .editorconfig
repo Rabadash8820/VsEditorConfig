@@ -1,4 +1,4 @@
-﻿root = true
+root = true
 
 # Core EditorConfig rules (https://editorconfig.org/#supported-properties)
 
@@ -32,6 +32,21 @@
     [*.{cs,csx,vb,vbx}]
     indent_size = 4
     insert_final_newline = true
+
+# See .NET rule categories documentation: https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/categories
+
+# COODE STYLE RULES
+###################################
+
+# Language rules: https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/language-rules
+
+# Unnecessary code rules: https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/unnecessary-code-rules
+
+# Formatting rules: https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/formatting-rules
+
+# Naming rules: https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/naming-rules
+
+# Miscellaneous rules: https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/miscellaneous-rules
 
 # .NET Language conventions (https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-language-conventions)
 
