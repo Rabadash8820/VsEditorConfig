@@ -70,10 +70,11 @@ root = true
         dotnet_style_readonly_field = true:warning
 
         # Parentheses
-        dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity:silent
+        dotnet_style_parentheses_in_arithmetic_binary_operators = never_if_unnecessary:silent
+        # For "||", "&&", and "??"
         dotnet_style_parentheses_in_other_binary_operators = always_for_clarity:silent
-        dotnet_style_parentheses_in_other_operators = always_for_clarity:silent
-        dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity:silent
+        dotnet_style_parentheses_in_other_operators = never_if_unnecessary:silent
+        dotnet_style_parentheses_in_relational_binary_operators = never_if_unnecessary:silent
 
         # Expressions
         dotnet_style_object_initializer = true:warning
